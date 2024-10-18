@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./index.css">
+</head>
+
+<body>
+    <svg class="checkbox-symbol">
+        <symbol id="check" viewbox="0 0 12 10">
+            <polyline points="1 11 3 1 5 11 7 -3 5 11 9 11     " stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+            </polyline>
+        </symbol>
+    </svg>
+    <div class="content">
+        <div>
+            <h3>Checkboxes</h3>
+            <div class="checkbox-container">
+                <input class="checkbox-input" id="apples" type="checkbox" />
+                <label class="checkbox" for="apples">
+                    <span>
+                        <svg width="12px" height="10px">
+                            <use xlink:href="#check"></use>
+                        </svg>
+                    </span>
+                    <span>Apples</span>
+                </label>
+
+
+
+                <input class="checkbox-input" id="oranges" type="checkbox" />
+
+                <label class="checkbox" for="oranges">
+                    <span>
+                        <svg width="12px" height="10px">
+                            <use xlink:href="#check"></use>
+                        </svg>
+                    </span>
+                    <span>Oranges</span>
+                </label>
+            </div>
+        </div>
+
+        <div>
+            <h3>Radio buttons</h3>
+            <div class="radio-container">
+                <input class="radio-input" id="apples_r" type="radio" name="fruit" />
+                <label class="radio" for="apples_r">Apples</label>
+                <input class="radio-input" id="oranges_r" type="radio" name="fruit" />
+                <label class="radio" for="oranges_r">Oranges</label>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
