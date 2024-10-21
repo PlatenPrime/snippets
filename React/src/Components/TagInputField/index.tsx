@@ -1,20 +1,24 @@
 
-import { useState } from "react";
+import { FC, KeyboardEvent, useState } from "react";
 import "./index.css"
 
+interface TagInputProps {
+    tags: string[];
+  }
+  
 
-
-export const TagInput = ({ tags }  ) => {
+export const TagInput: FC<TagInputProps> = ({ tags }  ) => {
     const [tagData, setTagData] = useState(tags);
 
-    const removeTagData = indexToRemove => {
+    const removeTagData = (indexToRemove: number) => {
         setTagData([...tagData.filter((_, index) => index !== indexToRemove)]);
     };
 
-    const addTagData = (event : any)  => {
-        if (event.target.value !== '') {
-            setTagData([...tagData, event.target.value]);
-            event.target.value = '';
+    const addTagData = (event: KeyboardEvent<HTMLInputElement>) => {
+        const target = event.target as HTMLInputElement;
+        if (target.value !== '') {
+            setTagData([...tagData, target.value]);
+            target.value = '';
         }
     };
 
